@@ -36,9 +36,11 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -2;
-  background-image:
-    linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+  background-image: linear-gradient(
+      rgba(99, 102, 241, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
@@ -51,9 +53,21 @@ body::after {
   width: 100%;
   height: 100%;
   z-index: -2;
-  background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 40% 20%, rgba(59, 130, 246, 0.06) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(99, 102, 241, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(168, 85, 247, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 20%,
+      rgba(59, 130, 246, 0.06) 0%,
+      transparent 50%
+    );
 }
 
 .bg-orb {
@@ -147,7 +161,8 @@ body::after {
 }
 
 @keyframes float1 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
   25% {
@@ -162,7 +177,8 @@ body::after {
 }
 
 @keyframes float2 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
   33% {
@@ -174,7 +190,8 @@ body::after {
 }
 
 @keyframes float3 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
   40% {
@@ -186,7 +203,8 @@ body::after {
 }
 
 @keyframes bubble1 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
   33% {
@@ -198,7 +216,8 @@ body::after {
 }
 
 @keyframes bubble2 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
   50% {
@@ -207,7 +226,8 @@ body::after {
 }
 
 @keyframes bubble3 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
   25% {
@@ -222,7 +242,8 @@ body::after {
 }
 
 @keyframes bubble4 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
   40% {
@@ -234,7 +255,8 @@ body::after {
 }
 
 @keyframes bubble5 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
   35% {
@@ -246,15 +268,29 @@ body::after {
 }
 
 .dark body::before {
-  background-image:
-    linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+  background-image: linear-gradient(
+      rgba(99, 102, 241, 0.05) 1px,
+      transparent 1px
+    ),
     linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
 }
 
 .dark body::after {
-  background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.12) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.12) 0%, transparent 50%),
-              radial-gradient(circle at 40% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(99, 102, 241, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(168, 85, 247, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 20%,
+      rgba(59, 130, 246, 0.1) 0%,
+      transparent 50%
+    );
 }
 
 .dark .bg-orb {
@@ -265,4 +301,26 @@ body::after {
 .dark .bubble {
   opacity: 0.2;
   filter: blur(80px);
+}
+
+.cursor {
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  background-color: currentColor;
+  animation: blink 2s infinite;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
 }

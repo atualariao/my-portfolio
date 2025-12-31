@@ -14,9 +14,7 @@ export default function ThemeToggle() {
   }, []);
 
   if (!mounted) {
-    return (
-      <div className="h-9 w-9 rounded-md bg-gray-100 dark:bg-gray-800" />
-    );
+    return <div className="h-9 w-9 rounded-md bg-gray-100 dark:bg-gray-800" />;
   }
 
   const nextTheme = resolvedTheme === "dark" ? "light" : "dark";

@@ -22,7 +22,9 @@ export default async function Projects() {
 
   return (
     <main className="mx-auto max-w-4xl px-4 py-8">
-      <h1 className="text-3xl font-bold tracking-tight">Projects</h1>
+      <h1 className="text-3xl font-bold tracking-tight">
+        Projects | Under Construction
+      </h1>
 
       <div className="mt-6 grid gap-6 sm:grid-cols-2">
         {projects.map((project) => (
