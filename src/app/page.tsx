@@ -15,7 +15,7 @@ export default function Home() {
           paragraph="I build web applications and backend systems, including automated data pipelines and APIs."
         />
 
-        {/* 🌙 Minimal supporting line */}
+        {/* Minimal supporting line */}
         <div className="text-xs tracking-wide text-gray-500 dark:text-gray-400">
           .NET • .NET Core • Next.js • Databases • CI/CD • ETL • Messaging
         </div>
@@ -37,7 +37,7 @@ export default function Home() {
               text-gray-700 transition hover:border-purple-500 hover:text-purple-500
               dark:border-gray-700 dark:text-gray-300 dark:hover:border-purple-400 dark:hover:text-purple-400"
           >
-            About
+            About Me
           </a>
 
           <a
@@ -50,7 +50,7 @@ export default function Home() {
           </a>
         </div>
 
-        {/* 🔥 Bottom visual anchor */}
+        {/* Bottom visual anchor */}
         <div
           className="absolute -bottom-8 left-1/2 h-px w-28 -translate-x-1/2
           bg-linear-to-r from-transparent via-purple-500 to-transparent"
