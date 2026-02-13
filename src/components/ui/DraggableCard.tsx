@@ -10,15 +10,13 @@ interface DraggableCardProps {
 }
 
 export default function DraggableCard({ children, className = "", headerContent }: DraggableCardProps) {
-  const constraintsRef = useRef(null);
-
   return (
-    <div ref={constraintsRef} className="w-full h-full relative z-20">
+    <div className="w-full h-full relative z-20">
       <motion.div
         drag
-        dragConstraints={constraintsRef}
-        dragElastic={0.05}
-        whileDrag={{ scale: 1.02, cursor: "grabbing" }}
+        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+        dragElastic={0.6}
+        whileDrag={{ scale: 1.05, cursor: "grabbing", zIndex: 100 }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
