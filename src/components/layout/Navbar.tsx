@@ -1,54 +1,60 @@
 "use client";
-
+import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const pathname = usePathname();
-
   const isActive = (path: string) => pathname === path;
 
   const links = [
-    { href: "/", label: "Home" },
-    { href: "/projects", label: "Projects" },
-    { href: "/about", label: "About Me" },
-    { href: "/contact", label: "Contact" },
-    { href: "/blogs", label: "Blogs" },
+    { href: "/", label: "HOME" },
+    { href: "/projects", label: "PROJECTS" },
+    { href: "/about", label: "ABOUT" },
+    { href: "/blogs", label: "LOGS" },
+    { href: "/contact", label: "CONTACT" },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-gray-200/20 bg-transparent backdrop-blur-md dark:border-gray-800/20 dark:bg-transparent">
-      <div className="mx-auto flex max-w-4xl items-center gap-4 px-4 py-4">
+    <nav className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 dark:border-gray-800 dark:bg-black/80 backdrop-blur-md transition-colors duration-300">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        {/* Logo / Brand */}
         <Link
           href="/"
-          className="text-lg font-bold tracking-tight transition-colors hover:text-purple-600 dark:hover:text-purple-400"
+          className="font-mono text-lg font-bold tracking-tighter text-gray-900 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
         >
-          Adriane Troy
+          ADRIANE_TROY<span className="text-indigo-500">.DEV</span>
         </Link>
+        
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center gap-8">
+          {links.map((link) => {
+            const active = isActive(link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-xs font-mono font-medium tracking-wide transition-colors duration-200
+                  ${
+                    active
+                      ? "text-indigo-600 dark:text-indigo-400 underline underline-offset-4 decoration-2"
+                      : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+                  }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </div>
 
-        <div className="ml-auto flex items-center gap-2">
-          <div className="flex gap-1 text-sm">
-            {links.map((link) => {
-              const active = isActive(link.href);
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`rounded-md px-3 py-2 transition-all duration-200
-                    ${
-                      active
-                        ? "bg-white/30 text-purple-700 backdrop-blur-sm dark:bg-purple-900/30 dark:text-purple-300"
-                        : "text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-100"
-                    }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-          </div>
+        <div className="flex items-center gap-4">
+           {/* Mobile Menu Placeholder */}
+           <div className="flex md:hidden">
+             {/* Future Drawer Trigger */}
+           </div>
 
-          <div className="ml-2 border-l border-gray-300 pl-2 dark:border-gray-700">
+          <div className="pl-4 border-l border-gray-200 dark:border-gray-800">
             <ThemeToggle />
           </div>
         </div>

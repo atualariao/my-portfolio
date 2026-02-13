@@ -82,7 +82,7 @@ export default function Footer() {
           viewBox="0 0 24 24"
           fill="currentColor"
         >
-          <path d="M11.566 21.5v-8.535a1.02 1.02 0 00-1.018-1.018.988.988 0 00-.958 1.018v8.535a.958.958 0 001.976 0zm1.283-13.034c-.382 1.409-1.409 2.436-2.877 3.03V9.431C11.744 8.862 13.33 7.476 14 5.69c.67-1.887.25-4.09-1.164-5.28A4.509 4.509 0 0010.49 0C8.744 0 7.15.61 6.063 1.677c-2.14 2.1-2.14 5.5 0 7.6.67.67 1.468 1.13 2.356 1.468v2.436c-2.616-.67-4.87-2.316-6.16-4.582C.848 6.063 0 3.327 0 .33v-.33h2.436v.33c0 2.436.67 4.752 1.857 6.608 1.13 1.677 2.676 2.975 4.503 3.625V8.225c-.61-.25-1.2-.61-1.677-1.13-1.409-1.408-1.409-3.684 0-5.092.728-.729 1.677-1.13 2.676-1.13a3.66 3.66 0 012.676 1.13c.909.908 1.18 2.316.67 3.463z" />
+          <path d="M11.566 21.5v-8.535a1.02 1.02 0 00-1.018-1.018.988.988 0 00-.958 1.018v8.535a.958.958 0 001.976 0zm1.283-13.034c-.382 1.409-1.409 2.436-2.877 3.03V9.431C11.744 8.862 13.33 7.476 14 5.69c.67-1.887.25-4.09-1.164-5.28A4.509 4.509 0 0010.49 0C8.744 0 7.15.61 6.063 1.677c-2.14 2.1-2.14 5.5 0 7.6.67.67 1.468 1.13 2.316 1.468v2.436c-2.616-.67-4.87-2.316-6.16-4.582C.848 6.063 0 3.327 0 .33v-.33h2.436v.33c0 2.436.67 4.752 1.857 6.608 1.13 1.677 2.676 2.975 4.503 3.625V8.225c-.61-.25-1.2-.61-1.677-1.13-1.409-1.408-1.409-3.684 0-5.092.728-.729 1.677-1.13 2.676-1.13a3.66 3.66 0 012.676 1.13c.909.908 1.18 2.316.67 3.463z" />
         </svg>
       ),
     },
@@ -104,23 +104,23 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="mt-auto border-t border-gray-200/20 bg-transparent backdrop-blur-md dark:border-gray-800/20">
-      <div className="mx-auto max-w-4xl px-4 py-6">
-        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+    <footer className="mt-auto w-full border-t border-gray-200/50 bg-white/5 backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-950/50">
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
           {/* Copyright */}
-          <div className="text-sm text-gray-600 dark:text-gray-400">
+          <div className="text-sm text-gray-500 dark:text-gray-400">
             &copy; {currentYear} Adriane Troy. All rights reserved.
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             {socialLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 transition-colors hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400"
+                className="text-gray-400 transition-all duration-300 hover:-translate-y-1 hover:text-indigo-600 dark:text-gray-500 dark:hover:text-indigo-400"
                 aria-label={link.name}
               >
                 {link.icon}
@@ -130,8 +130,8 @@ export default function Footer() {
         </div>
 
         {/* Optional tagline */}
-        <div className="mt-3 text-center text-xs text-gray-500 dark:text-gray-500">
-          Building with .NET, Next.js, and modern web technologies
+        <div className="mt-6 text-center text-xs text-gray-400 dark:text-gray-600">
+          Built with <span className="font-semibold text-gray-600 dark:text-gray-400">Next.js</span>, <span className="font-semibold text-gray-600 dark:text-gray-400">Tailwind CSS</span>, and <span className="font-semibold text-gray-600 dark:text-gray-400">Coffee</span> ☕
         </div>
       </div>
     </footer>
