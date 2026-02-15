@@ -88,8 +88,18 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 border-b border-gray-100 dark:border-gray-800/50 pb-3">
                 <span className="text-gray-500 uppercase tracking-wider font-semibold">Backend</span>
                 <div className="col-span-3 flex flex-wrap gap-1.5">
-                  {['C#', '.NET Core', 'RabbitMQ', 'Apache Kafka', 'Apache NiFi'].map((tech) => (
-                    <span key={tech} className="px-2 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 rounded border border-indigo-100 dark:border-indigo-800 hover:scale-105 transition-transform cursor-default">
+                  <span className="px-2 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 rounded border border-indigo-100 dark:border-indigo-800 hover:scale-105 transition-transform cursor-default">
+                    C# (.NET Core)
+                  </span>
+                </div>
+              </div>
+
+              {/* Data Engineering */}
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 border-b border-gray-100 dark:border-gray-800/50 pb-3">
+                <span className="text-gray-500 uppercase tracking-wider font-semibold">Data Eng</span>
+                <div className="col-span-3 flex flex-wrap gap-1.5">
+                  {['Apache Kafka', 'Apache NiFi', 'RabbitMQ', 'ELK Stack'].map((tech) => (
+                    <span key={tech} className="px-2 py-1 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded border border-purple-100 dark:border-purple-800 hover:scale-105 transition-transform cursor-default">
                       {tech}
                     </span>
                   ))}
@@ -108,11 +118,23 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Data & Cloud */}
+              {/* Authentication */}
               <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 border-b border-gray-100 dark:border-gray-800/50 pb-3">
-                <span className="text-gray-500 uppercase tracking-wider font-semibold">Data</span>
+                <span className="text-gray-500 uppercase tracking-wider font-semibold">Auth</span>
                 <div className="col-span-3 flex flex-wrap gap-1.5">
-                  {['MySQL', 'MSSQL', 'SQLite', 'MongoDB', 'Elasticsearch'].map((tech) => (
+                  {['Keycloak', 'Auth0', 'Web3'].map((tech) => (
+                    <span key={tech} className="px-2 py-1 bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300 rounded border border-rose-100 dark:border-rose-800 hover:scale-105 transition-transform cursor-default">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Data */}
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 border-b border-gray-100 dark:border-gray-800/50 pb-3">
+                <span className="text-gray-500 uppercase tracking-wider font-semibold">Database</span>
+                <div className="col-span-3 flex flex-wrap gap-1.5">
+                  {['MySQL', 'MSSQL', 'SQLite', 'MongoDB'].map((tech) => (
                     <span key={tech} className="px-2 py-1 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 rounded border border-emerald-100 dark:border-emerald-800 hover:scale-105 transition-transform cursor-default">
                       {tech}
                     </span>
@@ -120,11 +142,11 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* DevOps & Tools */}
+              {/* DevOps */}
               <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 pb-1">
                 <span className="text-gray-500 uppercase tracking-wider font-semibold">DevOps</span>
                 <div className="col-span-3 flex flex-wrap gap-1.5">
-                  {['Docker', 'Podman', 'Jenkins', 'Git', 'Visual Studio'].map((tech) => (
+                  {['Docker', 'Podman', 'Jenkins', 'Git'].map((tech) => (
                     <span key={tech} className="px-2 py-1 bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300 rounded border border-amber-100 dark:border-amber-800 hover:scale-105 transition-transform cursor-default">
                       {tech}
                     </span>
