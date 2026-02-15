@@ -63,14 +63,14 @@ export default function TypingText({
       {heading && (
         <h1 className={`text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 dark:from-white dark:via-slate-200 dark:to-slate-400 ${headingClassName}`}>
           {displayHeading}
-          {cursorTarget === "heading" && <span className="cursor-blink ml-1 border-r-4 border-indigo-500 inline-block h-[0.9em] align-middle animate-pulse" />}
+          {cursorTarget === "heading" && <span className="cursor-blink ml-1 border-r-4 border-indigo-500 inline-block h-[0.9em] align-middle animate-fast-blink" />}
         </h1>
       )}
 
       {paragraph && (
         <p className={`mt-4 text-xl text-gray-600 dark:text-gray-300 ${paragraphClassName}`}>
           {displayParagraph}
-          {cursorTarget === "paragraph" && <span className="cursor-blink ml-1 border-r-2 border-indigo-400 inline-block h-[0.9em] align-middle animate-pulse" />}
+          {cursorTarget === "paragraph" && <span className="cursor-blink ml-1 border-r-2 border-indigo-400 inline-block h-[0.9em] align-middle animate-fast-blink" />}
         </p>
       )}
     </div>
