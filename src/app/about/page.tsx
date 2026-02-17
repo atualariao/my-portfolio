@@ -7,7 +7,7 @@ export default function About() {
   const experience = [
     {
       company: "Eight Under Par (Palawan Pawnshop Operator) Inc.",
-      role: "Junior Software Engineer",
+      role: "Software Engineer",
       period: "October 2022 - Present",
       description: [
         "Write maintainable code by following SOLID, YAGNI, and KISS principles to adhere to coding standards.",
@@ -63,7 +63,7 @@ export default function About() {
             <div className="font-mono text-base sm:text-lg text-gray-600 dark:text-gray-400 border-l-2 border-cyan-500 pl-4 space-y-4">
               <TypingText
                 heading=""
-                paragraph="As a Junior Software Engineer with three years of experience, I’ve collaborated with professionals to build in-house solutions for accounting processes."
+                paragraph="As a Software Engineer with three years of experience, I’ve collaborated with professionals to build in-house solutions for accounting processes."
                 headingSpeed={0}
                 paragraphSpeed={20}
                 paragraphClassName="leading-relaxed font-bold text-gray-800 dark:text-gray-200"
