@@ -89,7 +89,7 @@ export default function Home() {
                 <span className="text-gray-500 uppercase tracking-wider font-semibold">Backend</span>
                 <div className="col-span-3 flex flex-wrap gap-1.5">
                   <span className="px-2 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 rounded border border-indigo-100 dark:border-indigo-800 hover:scale-105 transition-transform cursor-default">
-                    C# (.NET Core)
+                    C# (.NET)
                   </span>
                 </div>
               </div>
