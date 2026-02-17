@@ -33,7 +33,7 @@ export default function Home() {
             <div className="font-mono text-base sm:text-lg text-gray-600 dark:text-gray-400 border-l-2 border-indigo-500 pl-4 space-y-4">
               <TypingText
                 heading=""
-                paragraph="Junior Software Engineer specialized in .NET Core, Next.js, and scalable backend systems."
+                paragraph="Software Engineer specialized in .NET Core, Next.js, and scalable backend systems."
                 headingSpeed={0}
                 paragraphSpeed={30}
                 paragraphClassName="leading-relaxed font-bold text-gray-800 dark:text-gray-200"
