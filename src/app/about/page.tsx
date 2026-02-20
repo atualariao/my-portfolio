@@ -10,22 +10,22 @@ export default function About() {
       role: "Software Engineer",
       period: "October 2022 - Present",
       description: [
+        "Work in an agile environment to implement new features for scalable in-house systems.",
+        "Provide L3 developer support, performing Root Cause Analysis (RCA) to resolve critical production issues in collaboration with L1/L2 IT engineers.",
+        "Support User Acceptance Testing (UAT) with end-users and conduct component testing with QA testers.",
         "Write maintainable code by following SOLID, YAGNI, and KISS principles to adhere to coding standards.",
-        "Develop RESTful APIs for frontend applications to ensure fast and scalable integrations.",
+        "Develop RESTful APIs and WPF components to ensure seamless system integration.",
         "Implement and maintain CI/CD pipelines using Docker and Jenkins.",
         "Collaborate and communicate effectively with product managers, senior engineers, and other stakeholders.",
-        "Implement technology stacks as defined by system architects and senior engineers.",
-        "Stay updated on relevant regulations and apply necessary compliance measures.",
-        "Create and maintain comprehensive technical documentation for components.",
+        "Create and maintain comprehensive technical documentation and architectural diagrams.",
         "Ensure software complies with security best practices and industry standards.",
-        "Develop architectural diagrams and detailed system specifications in collaboration with senior engineers.",
         "Conduct code reviews with peers to give and receive constructive feedback."
       ]
     }
   ];
 
   const skills = {
-    backend: ["C# (.NET Core)"],
+    backend: ["C# (.NET Core & Framework)", "WPF"],
     frontend: ["TypeScript (NextJS)", "React", "Tailwind CSS"],
     authentication: ["Keycloak", "Auth0", "Web3 Integration"],
     "Data Engineering": ["Apache Kafka", "Apache NiFi", "RabbitMQ", "ELK Stack"],
@@ -63,7 +63,7 @@ export default function About() {
             <div className="font-mono text-base sm:text-lg text-gray-600 dark:text-gray-400 border-l-2 border-cyan-500 pl-4 space-y-4">
               <TypingText
                 heading=""
-                paragraph="As a Software Engineer with three years of experience, I’ve collaborated with professionals to build in-house solutions for accounting processes."
+                paragraph="As a Software Engineer, I've designed and maintained internal multi-branch Accounting Systems responsible for consolidating financial transactions from pawning and remittance operations."
                 headingSpeed={0}
                 paragraphSpeed={20}
                 paragraphClassName="leading-relaxed font-bold text-gray-800 dark:text-gray-200"

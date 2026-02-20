@@ -10,12 +10,17 @@ const projects = [
   {
     id: "01",
     title: "ACCOUNTING_SYSTEM_ARCHITECTURE",
-    description: "Maintenance and implementation of new features for a scalable in-house accounting system. This involves developing core ledger modules, banking integrations, and enhancing reporting services to improve system reliability and user experience.",
+    description: [
+      "Contributed to the continuous enhancement of an internal multi-branch Accounting System used for financial transaction consolidation and reporting.",
+      "Delivered new features in an agile development environment while maintaining system reliability in production.",
+      "Acted as L3 application support, collaborating with L1/L2 IT engineers to investigate and resolve production incidents through structured Root Cause Analysis (RCA).",
+      "Supported User Acceptance Testing (UAT) with business users and coordinated with QA teams for component-level validation to ensure financial workflow accuracy and system stability."
+    ],
     images: [
       "/accounting_system_context_diagram.jpg",
       "/sample.jpg", 
     ],
-    tags: ["System Maintenance", "Feature Engineering", "FinTech", ".NET Core"],
+    tags: ["Agile Development", "L3 Support (RCA)", ".NET Core and Framework", "WPF", "RESTful APIs", "Next.js"],
     status: "ACTIVE_MAINTENANCE",
     link: "#"
   }
@@ -136,9 +141,20 @@ export default function Projects() {
                   </div>
                   
                   <div className="space-y-4">
-                    <p className="font-mono text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                      {project.description}
-                    </p>
+                    <div className="font-mono text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                      {Array.isArray(project.description) ? (
+                        <ul className="space-y-2 list-none">
+                          {project.description.map((point, i) => (
+                            <li key={i} className="flex gap-2">
+                              <span className="text-indigo-500 shrink-0 select-none">›</span>
+                              <span>{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p>{project.description}</p>
+                      )}
+                    </div>
                     
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (

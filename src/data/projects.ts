@@ -18,9 +18,14 @@ export const projects: Project[] = [
   },
   {
     id: "3",
-    title: "Accounting Microservices",
-    description: "Distributed system for processing financial transactions using RabbitMQ.",
-    techStack: [".NET Core", "RabbitMQ", "Docker", "SQL Server"],
+    title: "Accounting System Architecture",
+    description: [
+      "Contributed to the continuous enhancement of an internal multi-branch Accounting System for consolidation and reporting.",
+      "Delivered new features in agile sprints while maintaining production reliability.",
+      "Provided L3 support and Root Cause Analysis (RCA) collaborating with L1/L2 teams.",
+      "Supported UAT and QA cycles to ensure financial workflow accuracy and stability."
+    ],
+    techStack: [".NET Core and Framework", "WPF", "RESTful APIs", "Next.js", "SQL Server"],
     repoUrl: "#",
   },
   {
