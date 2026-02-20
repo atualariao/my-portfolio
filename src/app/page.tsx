@@ -91,9 +91,6 @@ export default function Home() {
                   <span className="px-2 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 rounded border border-indigo-100 dark:border-indigo-800 hover:scale-105 transition-transform cursor-default">
                     C# (.NET Core & Framework)
                   </span>
-                  <span className="px-2 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 rounded border border-indigo-100 dark:border-indigo-800 hover:scale-105 transition-transform cursor-default">
-                    WPF
-                  </span>
                 </div>
               </div>
 
@@ -113,7 +110,7 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 border-b border-gray-100 dark:border-gray-800/50 pb-3">
                 <span className="text-gray-500 uppercase tracking-wider font-semibold">Frontend</span>
                 <div className="col-span-3 flex flex-wrap gap-1.5">
-                  {['TypeScript', 'Next.js', 'React', 'Tailwind'].map((tech) => (
+                  {['TypeScript', 'Next.js', 'React', 'Tailwind', 'WPF'].map((tech) => (
                     <span key={tech} className="px-2 py-1 bg-sky-50 dark:bg-sky-900/20 text-sky-700 dark:text-sky-300 rounded border border-sky-100 dark:border-sky-800 hover:scale-105 transition-transform cursor-default">
                       {tech}
                     </span>

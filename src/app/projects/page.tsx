@@ -6,7 +6,54 @@ import DraggableCard from "@/components/ui/DraggableCard";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ZoomIn, Layers, ChevronLeft, ChevronRight } from "lucide-react";
 
-const projects = [
+const getTagStyles = (tag: string) => {
+  const t = tag.toLowerCase();
+  
+  // Backend
+  if (t.includes('backend') || t.includes('.net') || t.includes('api') || t.includes('c#') || t.includes('restful')) {
+    return "bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 border-indigo-100 dark:border-indigo-800";
+  }
+  
+  // Frontend / UI
+  if (t.includes('frontend') || t.includes('wpf') || t.includes('next.js') || t.includes('react') || t.includes('tailwind') || t.includes('typescript')) {
+    return "bg-sky-50 dark:bg-sky-900/20 text-sky-700 dark:text-sky-300 border-sky-100 dark:border-sky-800";
+  }
+  
+  // DevOps / Process
+  if (t.includes('devops') || t.includes('agile') || t.includes('jenkins') || t.includes('docker') || t.includes('git')) {
+    return "bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300 border-amber-100 dark:border-amber-800";
+  }
+  
+  // Support / QA
+  if (t.includes('support') || t.includes('rca') || t.includes('uat') || t.includes('qa') || t.includes('testing')) {
+    return "bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300 border-rose-100 dark:border-rose-800";
+  }
+  
+  // Database
+  if (t.includes('database') || t.includes('sql') || t.includes('mongodb') || t.includes('mariadb')) {
+    return "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 border-emerald-100 dark:border-emerald-800";
+  }
+
+  // Data Engineering / Microservices
+  if (t.includes('kafka') || t.includes('rabbitmq') || t.includes('nifi') || t.includes('microservices')) {
+    return "bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 border-purple-100 dark:border-purple-800";
+  }
+
+  // Default
+  return "bg-gray-50 dark:bg-gray-900/50 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-800";
+};
+
+interface ProjectItem {
+  id: string;
+  title: string;
+  description: string | string[];
+  images: string[];
+  tags: string[];
+  status: string;
+  link: string;
+}
+
+const projects: ProjectItem[] = [
   {
     id: "01",
     title: "ACCOUNTING_SYSTEM_ARCHITECTURE",
@@ -29,7 +76,7 @@ const projects = [
 export default function Projects() {
   const [gallery, setGallery] = useState<{ projectId: string; index: number } | null>(null);
 
-  const activeProject = gallery ? projects.find(p => p.id === gallery.projectId) : null;
+  const activeProject = gallery ? projects.find((p: ProjectItem) => p.id === gallery.projectId) : null;
   const currentImage = activeProject ? activeProject.images[gallery!.index] : null;
 
   const nextImage = useCallback(() => {
@@ -75,7 +122,7 @@ export default function Projects() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {projects.map((project) => (
+          {projects.map((project: ProjectItem) => (
             <div key={project.id} className="relative group min-h-[500px]">
               <DraggableCard
                 headerContent={
@@ -105,7 +152,7 @@ export default function Projects() {
                       onClick={() => setGallery({ projectId: project.id, index: 0 })}
                     >
                       {/* Background Layers (Stacked Effect) */}
-                      {project.images.slice(1, 3).map((img, idx) => (
+                      {project.images.slice(1, 3).map((img: string, idx: number) => (
                         <div 
                           key={idx}
                           className="absolute inset-0 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded shadow-md transition-all duration-500"
@@ -135,7 +182,7 @@ export default function Projects() {
                       {/* Badge */}
                       <div className="absolute -bottom-2 -right-2 z-30 bg-indigo-600 text-white text-[10px] font-mono px-2 py-1 rounded flex items-center gap-1.5 shadow-lg border border-indigo-500">
                         <Layers size={12} />
-                        {project.images.length} ASSETS_STAKED
+                        {project.images.length} ASSETS_STACKED
                       </div>
                     </div>
                   </div>
@@ -144,7 +191,7 @@ export default function Projects() {
                     <div className="font-mono text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                       {Array.isArray(project.description) ? (
                         <ul className="space-y-2 list-none">
-                          {project.description.map((point, i) => (
+                          {project.description.map((point: string, i: number) => (
                             <li key={i} className="flex gap-2">
                               <span className="text-indigo-500 shrink-0 select-none">›</span>
                               <span>{point}</span>
@@ -157,8 +204,8 @@ export default function Projects() {
                     </div>
                     
                     <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <span key={tag} className="text-[10px] font-mono px-2 py-1 bg-gray-50 dark:bg-gray-900/50 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-800 rounded-sm">
+                      {project.tags.map((tag: string) => (
+                        <span key={tag} className={`text-[10px] font-mono px-2 py-1 border rounded-sm transition-colors ${getTagStyles(tag)}`}>
                           #{tag}
                         </span>
                       ))}
@@ -274,7 +321,7 @@ export default function Projects() {
                   Technical_Visual_Inspection // Full_Resolution_Scan
                 </p>
                 <div className="flex gap-2 justify-center">
-                  {activeProject?.images.map((_, idx) => (
+                  {activeProject?.images.map((_: string, idx: number) => (
                     <div 
                       key={idx}
                       className={`h-1 w-8 rounded-full transition-all duration-300 ${idx === gallery.index ? 'bg-indigo-500 w-12' : 'bg-gray-800'}`}
