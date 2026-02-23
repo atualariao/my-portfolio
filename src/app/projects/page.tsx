@@ -64,8 +64,8 @@ const projects: ProjectItem[] = [
       "Supported User Acceptance Testing (UAT) with business users and coordinated with QA teams for component-level validation to ensure financial workflow accuracy and system stability."
     ],
     images: [
+      "/accounting_system_container_diagram.jpg", 
       "/accounting_system_context_diagram.jpg",
-      "/sample.jpg", 
     ],
     tags: ["Agile Development", "L3 Support (RCA)", ".NET Core and Framework", "WPF", "RESTful APIs", "Next.js"],
     status: "ACTIVE_MAINTENANCE",
