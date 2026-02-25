@@ -110,7 +110,7 @@ export default function Projects() {
           </h1>
           <p className="font-mono text-sm text-gray-500 dark:text-gray-400 max-w-2xl">
             {
-              "// A curated collection of projects showcasing architectural design, development, and support expertise across various domains. Each entry includes detailed descriptions, technical stacks, and visual documentation to provide insights into the challenges faced and solutions implemented."
+              "// A curated collection of projects highlighting architectural design, system development, and production support experience. Each entry outlines technical responsibilities, technology stack, and documented system decisions to demonstrate problem-solving and engineering impact."
             }
           </p>
         </div>
