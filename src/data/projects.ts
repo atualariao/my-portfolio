@@ -1,4 +1,4 @@
-import { Project } from "@/types/project";
+import { Project } from "@/types/ProjectProps";
 
 export const projects: Project[] = [
   {
@@ -23,22 +23,30 @@ export const projects: Project[] = [
       "Contributed to the continuous enhancement of an internal multi-branch Accounting System for consolidation and reporting.",
       "Delivered new features in agile sprints while maintaining production reliability.",
       "Provided L3 support and Root Cause Analysis (RCA) collaborating with L1/L2 teams.",
-      "Supported UAT and QA cycles to ensure financial workflow accuracy and stability."
+      "Supported UAT and QA cycles to ensure financial workflow accuracy and stability.",
     ],
-    techStack: [".NET Core and Framework", "WPF", "RESTful APIs", "Next.js", "SQL Server"],
+    techStack: [
+      ".NET Core and Framework",
+      "WPF",
+      "RESTful APIs",
+      "Next.js",
+      "SQL Server",
+    ],
     repoUrl: "#",
   },
   {
     id: "4",
     title: "DevOps Automation Pipeline",
-    description: "CI/CD workflow automation using Jenkins and Docker containers.",
+    description:
+      "CI/CD workflow automation using Jenkins and Docker containers.",
     techStack: ["Jenkins", "Docker", "Bash", "Groovy"],
     repoUrl: "#",
   },
   {
     id: "5",
     title: "Real-time Data Dashboard",
-    description: "Interactive dashboard for visualizing high-frequency data streams.",
+    description:
+      "Interactive dashboard for visualizing high-frequency data streams.",
     techStack: ["React", "SignalR", "Apache Kafka", "Redis"],
     repoUrl: "#",
   },

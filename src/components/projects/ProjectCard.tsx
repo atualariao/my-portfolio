@@ -1,4 +1,4 @@
-import { Project } from "@/types/project";
+import { Project } from "@/types/ProjectProps";
 
 type Props = {
   project: Project;
@@ -7,7 +7,7 @@ type Props = {
 export default function ProjectCard({ project }: Props) {
   return (
     <div className="group relative overflow-hidden rounded-xl border border-gray-200/50 bg-white/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-purple-300 hover:shadow-xl hover:shadow-purple-100/50 dark:border-gray-800/50 dark:bg-gray-900/50 dark:hover:border-purple-700 dark:hover:shadow-purple-900/20">
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-blue-500/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+      <div className="absolute inset-0 bg-linear-to-br from-purple-500/5 via-transparent to-blue-500/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
       <div className="relative">
         <h2 className="text-xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
@@ -22,7 +22,7 @@ export default function ProjectCard({ project }: Props) {
           {project.techStack.map((tech) => (
             <span
               key={tech}
-              className="rounded-full bg-gradient-to-r from-purple-100 to-blue-100 px-3 py-1 text-xs font-medium text-purple-700 dark:from-purple-900/30 dark:to-blue-900/30 dark:text-purple-300"
+              className="rounded-full bg-linear-to-r from-purple-100 to-blue-100 px-3 py-1 text-xs font-medium text-purple-700 dark:from-purple-900/30 dark:to-blue-900/30 dark:text-purple-300"
             >
               {tech}
             </span>
